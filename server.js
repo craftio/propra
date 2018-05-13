@@ -6,7 +6,14 @@ app.set('PORT', config.webPort);
 
 const port = process.env.PORT || app.get('PORT');
 
-app.get('/hello', (reg, res) => {
+app.all('*', (req, res, next) => {
+   console.log(req.url);
+   next();
+});
+
+app.use('/api/v1', require('./routes/routes_api_v1'));
+
+app.get('/api/v1/home', (reg, res) => {
     res.send('Home');
 });
 
