@@ -1,7 +1,10 @@
 const express = require('express');
+const config = require('./config.json');
 const app = express();
 
-const port = process.env.PORT || 8080;
+app.set('PORT', config.webPort);
+
+const port = process.env.PORT || app.get('PORT');
 
 app.get('/hello', (reg, res) => {
     res.send('Home');
