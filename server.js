@@ -12,16 +12,10 @@ app.all('*', (req, res, next) => {
 });
 
 app.use('/api/v1', require('./routes/routes_api_v1'));
-
-app.get('/api/v1/home', (reg, res) => {
-    res.send('Home');
-});
-
-app.all('*', (req, res) => {
-    res.status(404);
-    res.send('404 - Not found');
-});
+app.use('/api/v2', require('./routes/routes_api_v2'));
 
 app.listen(port, () => {
     console.log('Server listening @ ' + port);
 });
+
+module.exports = app;
