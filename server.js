@@ -3,7 +3,7 @@ const app = express();
 
 let port = 8080;
 
-app.get('/', function (reg, res) {
+app.get('/hello', function (reg, res) {
     res.send('Home');
 })
 
