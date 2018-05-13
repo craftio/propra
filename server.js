@@ -1,17 +1,17 @@
 const express = require('express');
 const app = express();
 
-let port = 8080;
+const port = process.env.PORT || 8080;
 
-app.get('/hello', function (reg, res) {
+app.get('/hello', (reg, res) => {
     res.send('Home');
-})
+});
 
-app.all('*', function (req, res) {
+app.all('*', (req, res) => {
     res.status(404);
     res.send('404 - Not found');
-})
+});
 
-app.listen(port, function () {
+app.listen(port, () => {
     console.log('Server listening @ ' + port);
-})
+});
