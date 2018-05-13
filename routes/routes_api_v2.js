@@ -9,6 +9,11 @@ router.get('/info', (req, res) => {
     });
 });
 
+router.get('/recipes', (req, res) => {
+    res.status(200);
+    res.json(require('../recipes.js'));
+})
+
 router.get('*', (req, res) => {
     res.status(404);
     res.json({
