@@ -1,10 +1,11 @@
 {
   "name": "practicum",
   "version": "1.0.0",
-  "description": "Practicum Opdrachten",
-  "main": "index.js",
+  "description": "Practicum opdrachten",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "btaks",
   "license": "ISC",
