@@ -29,7 +29,7 @@ router.get('/recipes/:category?', (req, res, next) => {
     res.json(result);
 });
 
-router.get('/recipes', (req, res,) => {
+router.get('/recipes', (req, res, next) => {
     res.status(200);
     res.json(recipes);
 });
